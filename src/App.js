@@ -12,16 +12,13 @@ function App() {
   const handleGoalAdd = enteredText => {
     setCourseGoals(prevGoals => {
       const updatedGoals = [...prevGoals];
-      updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
-      return updatedGoals;
+      return updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
     });
   };
 
   const handleItemDelete = goalId => {
     setCourseGoals(prevGoals => {
-      const updatedGoals = prevGoals.filter(goal => goal.id !== goalId);
-      console.log(prevGoals)
-      return updatedGoals;
+      return prevGoals.filter(goal => goal.id !== goalId);
     });
   };
 
