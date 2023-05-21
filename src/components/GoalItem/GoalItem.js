@@ -3,7 +3,7 @@ import './GoalItem.css';
 
 const GoalItem = props => {
   const handleDelete = () => {
-    props.onDelete();
+    props.onDelete(props.id);
   }
   
   return (
